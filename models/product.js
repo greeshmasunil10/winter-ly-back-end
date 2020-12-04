@@ -24,18 +24,23 @@ const productSchema = new mongoose.Schema(
             type:ObjectId,
             ref:'Category',
             maxlength:32,
-            require:true
+            required:true
         },
         quantity:{
-            type:Number
+            type:Number,
+            required:true
+        },
+        sold:{
+            type:Number,
+            default:0
         },
         photo:{
             data:Buffer,
-            contentType:String
+            contentType:String,
         },
         shipping:{
-            require:false,
-            type:Boolean
+            required:true,
+            type:Boolean,
         }
     },
         { timestamps:true}
