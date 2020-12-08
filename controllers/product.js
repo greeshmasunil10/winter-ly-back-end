@@ -55,7 +55,7 @@ exports.create = (req, res) => {
       if (err) {
         return res.status(400).json({ error: errorHandler(err) });
       }
-      return res.json({ result });
+      return res.json(result);
     });
   });
 };
@@ -213,4 +213,22 @@ exports.photo = (req, res, next) => {
     return res.send(req.product.photo.data);
   }
   next();
+};
+
+//creates query obj to hold search and categroy values
+exports.listSearch = (req, res) => {
+  const query = {};
+  if (req.query.search) {
+    query.name = { $regex: req.query.search, $options: "i" };
+    if (req.query.category && req.query.category !== "All") {
+      query.category = req.query.category;
+    }
+    Product.find(query, (err, products) => {
+      if (err) {
+        return res.status(400).json({ error: "did not work" });
+      } else {
+        res.json(products);
+      }
+    }).select("-photo");
+  }
 };
