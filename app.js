@@ -1,42 +1,45 @@
 const express = require("express");
-const mongoose = require('mongoose')
-const morgan = require('morgan');
-const bodyParser = require('body-parser')
-const cookieParser = require('cookie-parser')
-const expressValidator= require('express-validator')
-const cors = require('cors')
+const mongoose = require("mongoose");
+const morgan = require("morgan");
+const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
+const expressValidator = require("express-validator");
+const cors = require("cors");
 
-const authRoutes = require("./routes/auth")
-const userRoutes = require("./routes/user")
-const categoryRoutes = require("./routes/category")
-const productRoutes = require("./routes/product")
+const authRoutes = require("./routes/auth");
+const userRoutes = require("./routes/user");
+const categoryRoutes = require("./routes/category");
+const productRoutes = require("./routes/product");
+const braintreeRoutes = require("./routes/braintree");
 require("dotenv").config();
 
-const app = express();  
+const app = express();
 
 //db
-mongoose.connect(process.env.DATABASE, {
+mongoose
+  .connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
-    useCreateIndex: true
-}).then(() => console.log("Database Connected."));
-
+    useCreateIndex: true,
+  })
+  .then(() => console.log("Database Connected."));
 
 //middleware
-app.use(morgan('dev'));
+app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(expressValidator());    
+app.use(expressValidator());
 app.use(cors());
 
 //routes middleware
-app.use("/api",authRoutes);
-app.use("/api",userRoutes);
-app.use("/api",categoryRoutes);
-app.use("/api",productRoutes);
+app.use("/api", authRoutes);
+app.use("/api", userRoutes);
+app.use("/api", categoryRoutes);
+app.use("/api", productRoutes);
+app.use("/api", braintreeRoutes);
 
 const port = process.env.PORT;
-app.listen(port, (req,res) =>{
-    console.log(`Express server running on PORT:${port}`);
+app.listen(port, (req, res) => {
+  console.log(`Express server running on PORT:${port}`);
 });
