@@ -118,7 +118,7 @@ exports.addOrderToUserHistory = (req, res, next) => {
 exports.purchaseHistory = (req, res) => {
   Order.find({ user: req.profile._id })
     .populate("user", "_id name")
-    .sort("-created")
+    .sort([["createdAt", "desc"]])
     .exec((err, orders) => {
       if (err) {
         return res.status(400).json({ error: errorHandler(err) });
