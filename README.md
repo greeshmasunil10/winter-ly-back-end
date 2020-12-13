@@ -1,10 +1,10 @@
-# Winterly Back end :snowflake: http://winter-ly.com/ :snowflake:
+# Winterly Backend :snowflake: http://winter-ly.com/ :snowflake:
 
-## Introduction
-* An ecommerce platform to sell online. The back end is implemented using REST api, nodejs and expressjs with MongoDB database.
+## What is Winterly?
+* An ecommerce platform to sell online. The backend is implemented using RESTful API : nodejs and expressjs with MongoDB database. A payment gateway, Braintree, is used for Credit card and Paypal payment processing.
 
 ## Deployed
-* A fully functional ecommerce web application "Winterly", is deployed to Digital ocean. 
+* The functional ecommerce web application "Winterly" , is deployed to Digital ocean. 
 * To view : http://winter-ly.com/
 
 ## Tools and Technologies
