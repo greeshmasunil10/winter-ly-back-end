@@ -4,7 +4,7 @@
 * An ecommerce platform to sell online. The backend is implemented using RESTful API : nodejs and expressjs with MongoDB database. A payment gateway, Braintree, is used for Credit card and Paypal payment processing. User passwords are securely stored and validated using SHA-1 one way encryption.
 
 ## Deployed
-* The functional ecommerce web application "Winterly" , is deployed to Digital ocean. 
+* The fully functional ecommerce web application "Winterly" , is deployed to Digital ocean. 
 * To view : http://winter-ly.com/
 
 ## Tools and Technologies
