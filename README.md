@@ -1,11 +1,11 @@
-# Winterly Back end
+# Winterly Back end :snowflake: http://winter-ly.com/ :snowflake:
 
 ## Introduction
 * An ecommerce platform to sell online. The back end is implemented using REST api, nodejs and expressjs with MongoDB database.
 
 ## Deployed
 * A fully functional ecommerce web application "Winterly", is deployed to Digital ocean. 
-To view the web app :http://winter-ly.com/
+* To view : http://winter-ly.com/
 
 ## Tools and Technologies
 * [node.js](https://nodejs.org/en/)
