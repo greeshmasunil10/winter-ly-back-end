@@ -1,7 +1,7 @@
-# Winterly Backend :snowflake: http://winter-ly.com/ :snowflake:
+# :snowflake: [Winterly](http://winter-ly.com/) :snowflake: Backend 
 
-## What is Winterly?
-* An ecommerce platform to sell online. The backend is implemented using RESTful API : nodejs and expressjs with MongoDB database. A payment gateway, Braintree, is used for Credit card and Paypal payment processing.
+## What is Winterly:grey_question:
+* An ecommerce platform to sell online. The backend is implemented using RESTful API : nodejs and expressjs with MongoDB database. A payment gateway, Braintree, is used for Credit card and Paypal payment processing. User passwords are securely stored and validated using SHA-1 one way encryption.
 
 ## Deployed
 * The functional ecommerce web application "Winterly" , is deployed to Digital ocean. 
@@ -14,6 +14,7 @@
 * [mongoose](https://www.npmjs.com/package/mongoose)
 * [braintree](https://www.npmjs.com/package/braintree)
 * [braintree-web-drop-in-react](https://www.npmjs.com/package/braintree-web-drop-in-react)
+* [Braintree Sandbox](https://sandbox.braintreegateway.com/)
 * [uuids](https://www.npmjs.com/package/uuid)
 * [body-parser](https://www.npmjs.com/package/body-parser)
 * [cookie-parser](https://www.npmjs.com/package/cookie-parser)
