@@ -1,7 +1,7 @@
 # :snowflake: [Winterly](http://winter-ly.com/) :snowflake: Backend 
 
 ## What is Winterly:grey_question:
-* An ecommerce platform to sell online. The backend is implemented using RESTful API : nodejs and expressjs with MongoDB database. A payment gateway, Braintree, is used for Credit card and Paypal payment processing. User passwords are securely stored and validated using SHA-1 one way encryption.
+* An ecommerce platform to sell online. The backend is implemented using REST API : Node and Express with MongoDB database. A payment gateway, Braintree, is used for Credit card and Paypal payment processing. Uses SHA-1 one way encryption to securely store and validate user credetnials.
 
 ## Screenshots
 ![Sign in](https://github.com/greeshmasunil10/winter-ly-front-end/blob/master/images/Sign%20in.png)
