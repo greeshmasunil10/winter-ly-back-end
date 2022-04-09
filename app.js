@@ -24,7 +24,7 @@ mongoose
     useFindAndModify: false,
     useCreateIndex: true,
   })
-  .then(() => console.log("Hello there, Database Connected2."))
+  .then(() => console.log("Database Is Connected."))
   .catch((error) => {
     console.log(`can not connect to database, ${error}`);
   });
