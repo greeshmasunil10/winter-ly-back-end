@@ -1,7 +1,8 @@
-# :snowflake: [Winterly](http://winter-ly.com/) :snowflake: Backend 
+# :snowflake: [Winterly](https://winter-ly.herokuapp.com/) :snowflake: Backend 
 
-#CLICK [HERE](https://winter-ly.herokuapp.com/) TO VIEW THE DEPLOYED WEB APP ON HEROKU
-#CLICK [HERE](https://winter-ly-api.herokuapp.com/) TO ACCESS THE API
+## Click [here](https://winter-ly.herokuapp.com/) to view the live web application deployed on heroku
+
+## API URL: https://winter-ly-api.herokuapp.com/
 
 ## What is Winterly:grey_question:
 * An ecommerce platform to sell online. The backend is implemented using REST API : Node and Express with MongoDB database. A payment gateway, Braintree, is used for Credit card and Paypal payment processing. Uses SHA-1 one way encryption to securely store and validate user credetnials.
