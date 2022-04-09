@@ -29,18 +29,6 @@ mongoose
     console.log(`can not connect to database, ${error}`);
   });
 
-  // mongoose.connect(process.env.DATABASE, {
-  //       useNewUrlParser: true},{
-  //       useUnifiedTopology: true,
-  //       useFindAndModify: false,
-  //       useCreateIndex: true,
-  //     });
-  // // mongoose.connection.once('open', function(){
-  // //   console.log('Conection has been made!');
-  // // }).on('error', function(error){
-  // //     console.log('Error is: ', error);
-  // // });
-
 //middleware
 app.use(morgan("dev"));
 app.use(bodyParser.json());
