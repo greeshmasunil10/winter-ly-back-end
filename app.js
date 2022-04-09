@@ -24,7 +24,7 @@ const app = express();
 //     useFindAndModify: false,
 //     useCreateIndex: true,
 //   })
-//   .then(() => console.log("Database Connected."))
+//   .then(() => console.log("Database Connected2."))
 //   .catch((error) => {
 //     console.log(`can not connect to database, ${error}`);
 //   });
