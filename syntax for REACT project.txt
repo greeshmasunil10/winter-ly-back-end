@@ -1,0 +1,112 @@
+npm i express dotenv nodemon
+npm i mongoose
+npm i uuids
+npm i body-parser morgan
+npm i cookie-parser
+npm i express-jwt jsonwebtoken
+npm i express-validator@5.3.1
+npm i formidable lodash
+npm i cors
+
+npm i braintree
+npm install braintree-web-drop-in-react braintree-web
+
+
+front end
+
+npx create-react-app ecommerce-front
+npm i react-router-dom
+npm i query-string
+npm i moment
+
+
+Libraries
+Express
+nodemon
+dotenv
+mongoose
+
+Robo 3T software to monitor
+
+
+braintree
+https://sandbox.braintreegateway.com/
+greeshmasunil10
+https://www.npmjs.com/package/braintree-web-drop-in-react
+
+
+
+
+digital ocean
+---- BEGIN SSH2 PUBLIC KEY ----
+Comment: "rsa-key-20201211"
+AAAAB3NzaC1yc2EAAAABJQAAAQEAxF+KSAfK6ObJOmudrK/jnVuIPsXWhhGWKmGz
+tas9xSSx5wkkxJycuxLkQfLe/qRcblPI+gAAaiN9k+Lqtia1qUeCQzRo4bcq2LtT
+W2n5MTrY2wVOJJCn9qqWQ309/OstUjFo5Q3CBMK0IO6fRQRV6jsbmqmEKXtoPaKh
+Vk63ynomjcBWdLpnDutj0vehLUWguFON4w/F4xMmOpvop3/xNEIn5kcOFRTD9WuJ
+OxPKPLCMtyZy9IHDjlEFxNq+BWsC0BUmt0xT5i6B1/EAMBeuLBw92s+rU2ib43Lo
+ICfJnYFNOKtm/grlYwPWa9nR3e94ka7KON23/yklrzMfnoYUkw==
+---- END SSH2 PUBLIC KEY ----
+
+ssh root@159.203.6.3
+
+sudo adduser ecomadmin
+
+159.203.6.3
+root:greeshmajay
+ecomadmin:rtfg
+usermod -aG sudo ecomadmin
+sudo su ecomadmin
+
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
+
+sudo apt-get install nginx  
+cd /etc/nginx/sites-available
+ls
+sudo vim default
+
+
+sudo nginx -t
+sudo systemctl restart nginx
+
+
+git clone repo link front end 
+git clone repo link back end 
+
+cd both directories
+
+sudo touch .env
+sudo vim .env
+copy .env with link address
+DATABASE=mongodb://127.0.0.1:27017/ecommerce-front
+
+front end
+/api
+
+https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-18-04-source
+
+
+
+sudo npm i pm2 -g
+
+cd ecom back 
+npm install
+
+ pm2 start app.js
+ 
+ 
+ cd ecom front
+ npm install
+ npm run build
+ pm2 start server.js
+ 
+ pm2 start server.js -f 
+ to restart
+
+mongo
+show dbs
+use ecommerce
+
+db.users.find().pretty()
+
+db.users.update({_id:ObjectId("5fd41971e1f5034aa51077b3")},{$set:{role:1}}); 

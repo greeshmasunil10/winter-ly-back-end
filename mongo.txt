@@ -1,0 +1,2 @@
+MONGO_URI=mongodb+srv://greeshma:admin123@nodeapi.2h7zm.mongodb.net/<dbname>?retryWrites=true&w=majority
+
