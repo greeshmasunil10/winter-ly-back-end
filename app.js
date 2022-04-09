@@ -17,16 +17,23 @@ require("dotenv").config();
 const app = express();
 
 //db
-mongoose
-  .connect('mongodb+srv://greeshma:admin123@nodeapi.2h7zm.mongodb.net/ecommerce?retryWrites=true&w=majority', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
-  })
-  .then(() => console.log("Database Connected."))
-  .catch((error) => {
-    console.log(`can not connect to database, ${error}`);
+// mongoose
+//   .connect('mongodb+srv://greeshma:admin123@nodeapi.2h7zm.mongodb.net/ecommerce?retryWrites=true&w=majority',{
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     useFindAndModify: false,
+//     useCreateIndex: true,
+//   })
+//   .then(() => console.log("Database Connected."))
+//   .catch((error) => {
+//     console.log(`can not connect to database, ${error}`);
+//   });
+
+  mongoose.connect('mongodb+srv://greeshma:admin123@nodeapi.2h7zm.mongodb.net/ecommerce?retryWrites=true&w=majority', {useNewUrlParser: true});
+  mongoose.connection.once('open', function(){
+    console.log('Conection has been made!');
+  }).on('error', function(error){
+      console.log('Error is: ', error);
   });
 
 //middleware
