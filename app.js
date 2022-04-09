@@ -18,7 +18,7 @@ const app = express();
 
 //db
 mongoose
-  .connect(process.env.DATABASE, {
+  .connect('mongodb+srv://greeshma:admin123@nodeapi.2h7zm.mongodb.net/ecommerce?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
