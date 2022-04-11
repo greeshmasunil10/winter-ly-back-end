@@ -117,6 +117,17 @@ exports.update = (req, res) => {
 
 //http://localhost:8000/api/products?sortBy=sold&order=desc&limit=4
 //http://localhost:8000/api/products?sortBy=createdAt&order=desc&limit=4
+
+/**
+ * 
+ * @swagger
+ * /api/products:
+ *  get :
+ *    description: Lists all the products
+ *    responses:
+ *      '200' : 
+ *        description: Success
+ */
 exports.list = (req, res) => {
   let order = req.query.order ? req.query.order : "asc";
   let sortBy = req.query.sortBy ? req.query.sortBy : "_id";

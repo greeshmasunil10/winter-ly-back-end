@@ -14,9 +14,52 @@ const braintreeRoutes = require("./routes/braintree");
 const orderRoutes = require("./routes/order");
 require("dotenv").config();
 
+
 const app = express();
 
-// db
+
+//swagger documentation
+const swaggerJsDoc = require('swagger-jsdoc')
+const swaggerUI = require('swagger-ui-express')
+
+
+const swaggerOptions = {
+  swaggerDefinition: {
+    info: {
+      "title": "Winterly API",
+      "description": "This is the node API backend used for Winterly",
+      "version": "1.0.1",
+      // servers: ["http://localhost:3000/api"]
+    }
+  },
+      apis: ['./controllers/*.js']
+};
+
+// const swaggerOptions = {
+//   definition: {
+//     info: {
+//       title: 'Winterly API',
+//       version: '1.0.0'
+//     },
+//   // servers:[
+//   //   {
+//   //     url : url
+//   //   }
+//   // ],
+//   apis: ["./controllers/*.js"],
+//   // ['/contollers/auth.js'],
+//   // ['braintree.js']
+//   // ['category.js'],
+//   // ['order.js'],
+//   // ['product.js'],
+//   // ['user.js']
+// }
+// }
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+app.use('/api-docs',swaggerUI.serve,swaggerUI.setup(swaggerDocs));
+
+
+// // db
 mongoose
   .connect(process.env.DATABASE,{
     useNewUrlParser: true,

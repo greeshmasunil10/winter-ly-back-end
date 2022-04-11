@@ -32,6 +32,9 @@
     "mongoose": "^5.11.2",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.6",
+    "swagger": "^0.7.5",
+    "swagger-jsdoc": "^6.2.0",
+    "swagger-ui-express": "^4.3.0",
     "uuid": "^8.3.1"
   }
 }
