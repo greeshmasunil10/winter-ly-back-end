@@ -1,6 +1,6 @@
-# :snowflake: [Winterly](https://winter-ly.herokuapp.com/) :snowflake: Backend 
+# :snowflake: [Winterly](https://winter-ly.com) :snowflake: Backend 
 
-## Click [here](https://winter-ly.herokuapp.com/) to view the live web application deployed on heroku
+## Click [winter-ly.com](https://winter-ly.herokuapp.com/) to view the live web application deployed on heroku
 
 ### API URL: https://winter-ly-api.herokuapp.com/
 
