@@ -27,36 +27,19 @@ const swaggerOptions = {
   swaggerDefinition: {
     info: {
       "title": "Winterly API",
-      "description": "This is the node API backend used for Winterly",
+      "description": "This is the node API backend used for Winterly. Documentation under development)",
       "version": "1.0.1",
       // servers: ["http://localhost:3000/api"]
-    }
+    },
   },
-      apis: ['./controllers/*.js']
+      // apis: ['**/*.js'], 
+      apis: ['./controllers/*.js','./models/*.js'], 
+      // apis: ['./models/*.js'], 
 };
 
-// const swaggerOptions = {
-//   definition: {
-//     info: {
-//       title: 'Winterly API',
-//       version: '1.0.0'
-//     },
-//   // servers:[
-//   //   {
-//   //     url : url
-//   //   }
-//   // ],
-//   apis: ["./controllers/*.js"],
-//   // ['/contollers/auth.js'],
-//   // ['braintree.js']
-//   // ['category.js'],
-//   // ['order.js'],
-//   // ['product.js'],
-//   // ['user.js']
-// }
-// }
+
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
-app.use('/api-docs',swaggerUI.serve,swaggerUI.setup(swaggerDocs));
+app.use('/docs',swaggerUI.serve,swaggerUI.setup(swaggerDocs));
 
 
 // // db

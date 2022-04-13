@@ -13,6 +13,23 @@ exports.categoryById = (req, res, next, id) => {
   });
 };
 
+/**
+ * @swagger
+ * /api/category/{categoryId}:
+ *  get :
+ *    description: Finds the category
+ *    tags: [Categories]
+ *    parameters:
+ *       - in: path
+ *         name: categoryId
+ *         required: true
+ *         minimum: 1
+ *         description: Category id
+ *    responses:
+ *      '200' : 
+ *        description: Success
+ *      
+ */
 exports.read = (req, res) => {
   return res.json(req.category);
 };
@@ -54,6 +71,17 @@ exports.update = (req, res) => {
   });
 };
 
+/**
+ * @swagger
+ * /api/categories:
+ *  get :
+ *    description: Finds the category
+ *    tags: [Categories]
+ *    responses:
+ *      '200' : 
+ *        description: Success
+ *      
+ */
 exports.list = (req, res) => {
   Category.find().exec((err, data) => {
     if (err) {

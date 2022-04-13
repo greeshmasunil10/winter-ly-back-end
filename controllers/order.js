@@ -1,6 +1,13 @@
 const { Order, CartItem } = require("../models/order");
 const { errorHandler } = require("../helpers/dbErrorHandler");
 
+/**
+ * @swagger
+ * tags:
+ *  name: Orders
+ *  description:  Manage orders
+ */
+
 exports.orderById = (req, res, next, id) => {
   Order.findById(id)
     .populate("products.product", "name price")
@@ -25,6 +32,23 @@ exports.create = (req, res) => {
     }
   });
 };
+
+/**
+ * @swagger
+ * /api/orders/list/{userId}:
+ *  get :
+ *    description: Lists the orders
+ *    tags: [Orders]
+ *    parameters:
+ *       - in: path
+ *         name: userId
+ *         required: true
+ *         minimum: 1
+ *         description: User ID
+ *    responses:
+ *      '200' : 
+ *        description: Success
+ */
 exports.listOrders = (req, res) => {
   Order.find()
     .populate("user", "_id name address")

@@ -18,6 +18,23 @@ exports.productById = (req, res, next, id) => {
     });
 };
 
+/**
+ * @swagger
+ * /api/product/{productId}:
+ *  get :
+ *    description: Lists at most 6 products related to the requested product Id
+ *    tags: [Products]
+ *    parameters:
+ *       - in: path
+ *         name: productId
+ *         required: true
+ *         minimum: 1
+ *         description: The product id to be passed
+ *    responses:
+ *      '200' : 
+ *        description: Success
+ *      
+ */
 exports.read = (req, res) => {
   req.product.photo = undefined;
   return res.json(req.product);
@@ -123,10 +140,21 @@ exports.update = (req, res) => {
  * @swagger
  * /api/products:
  *  get :
- *    description: Lists all the products
+ *    description: Lists all the products.
+ *    tags: [Products]
+ *    parameters:
+ *        - in: query
+ *          name: sortBy
+ *          description: Sort by can be -  "sold", "createdAt", "name" or any other field of the product
+ *        - in: query
+ *          name: order
+ *          description: Order can be "asc" or "desc"
+ *        - in: query
+ *          name: limit
+ *          description: The number of products to display
  *    responses:
- *      '200' : 
- *        description: Success
+ *          '200' : 
+ *             description: Success
  */
 exports.list = (req, res) => {
   let order = req.query.order ? req.query.order : "asc";
@@ -144,11 +172,33 @@ exports.list = (req, res) => {
       return res.json(products);
     });
 };
+// /**
+//  
+//  Will find products related to the requested product id
+//  by fetching products from the same category
+//   http://localhost:8000/api/products/related/5fca6e65c4891745a14213ed?limit=4
+//  
+
 /**
- *
- * Will find products related to the requested product id
- * by fetching products from the same category
- *  http://localhost:8000/api/products/related/5fca6e65c4891745a14213ed?limit=4
+ * @swagger
+ * /api/products/related/{productId}:
+ *  get :
+ *    description: Lists at most 6 products related to the requested product Id
+ *    tags: [Products]
+ *    parameters:
+ *       - in: path
+ *         name: productId
+ *         required: true
+ *         minimum: 1
+ *         description: The product id to be passed
+ *       - in: query
+ *         name: limit
+ *         type: integer
+ *         description: Limit
+ *    responses:
+ *      '200' : 
+ *        description: Success
+ *      
  */
 exports.listRelated = (req, res) => {
   let limit = req.query.limit ? parseInt(req.query.limit) : 6;
@@ -163,11 +213,18 @@ exports.listRelated = (req, res) => {
       return res.json(products);
     });
 };
-/**
- *
- *
- */
 
+
+/**
+ * @swagger
+ * /api/products/categories:
+ *  get :
+ *    tags: [Products]
+ *    description: Lists the categories (Category IDs)
+ *    responses:
+ *      '200' : 
+ *        description: Success
+ */
 exports.listCategories = (req, res) => {
   Product.distinct("category", (err, categories) => {
     if (err) {
@@ -218,6 +275,22 @@ exports.listBySearch = (req, res) => {
     });
 };
 
+/**
+ * @swagger
+ * /api//product/photo/productId}:
+ *  get :
+ *    tags: [Products]
+ *    description: Lists the categories (Category IDs)
+ *    parameters:
+ *       - in: path
+ *         name: productId
+ *         required: true
+ *         minimum: 1
+ *         description: Product ID
+ *    responses:
+ *      '200' : 
+ *        description: Success
+ */
 exports.photo = (req, res, next) => {
   if (req.product.photo.data) {
     res.set("Content-Type", req.product.photo.contentType);
