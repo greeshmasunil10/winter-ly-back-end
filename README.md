@@ -4,7 +4,7 @@ Winterly is an e-commerce platform that enables businesses to sell their product
 
 ### Click [here](https://winter-ly.herokuapp.com/) to view the live web application deployed on heroku
 
-## Features
+## 🧩Features
 
 - User authentication and secure storage of user credentials using SHA-1 one-way encryption
 - Ability for businesses to create and manage their product listings
@@ -15,7 +15,7 @@ Winterly is an e-commerce platform that enables businesses to sell their product
 
 ### API BACKEND: https://winter-ly-api.herokuapp.com/
 
-## Getting Started
+## 🚀 Getting Started
 
 To use Winter-ly, follow these steps:
 
@@ -32,7 +32,7 @@ To use Winter-ly, follow these steps:
 
 If you're a business owner interested in listing your products on Winter-ly, you can sign up for a business account by contacting us. Once you've signed up, we'll create an admin account for you that will allow you to manage your listed products, update order status, and more. As an admin, you'll have full control over your products and orders, giving you the flexibility to tailor your offerings to meet your customers' needs.
 
-## Tools and Technologies
+## 🛠️ Tools and Technologies
 
 Winterly uses the following tools and technologies:
 
@@ -51,7 +51,7 @@ Winterly uses the following tools and technologies:
 - Cors
 
 
-## Snapshots
+## :camera: Snapshots
 ![Sign in](https://github.com/greeshmasunil10/winter-ly-front-end/blob/master/images/Sign%20in.png)
 ![View Product](https://github.com/greeshmasunil10/winter-ly-front-end/blob/master/images/Product.png)
 ![Search](https://github.com/greeshmasunil10/winter-ly-front-end/blob/master/images/localhost_3000_shop%20(9).png)
