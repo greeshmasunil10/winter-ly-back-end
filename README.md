@@ -1,4 +1,7 @@
 # [Winterly](https://winter-ly.herokuapp.com/) (back-end demo)
+![GitHub top language](https://img.shields.io/github/languages/top/greeshmasunil10/winter-ly-back-end)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/greeshmasunil10/winter-ly-back-end/blob/master/LICENSE)
+![GitHub last commit](https://img.shields.io/github/last-commit/greeshmasunil10/winter-ly-back-end)
 
 Winterly is an e-commerce platform that enables businesses to sell their products and services online. The backend of the platform is implemented using REST API with Node.js and Express, while the database is handled using MongoDB. The payment gateway used for credit card and PayPal payment processing is Braintree. Additionally, user credentials are stored securely using SHA-1 one-way encryption.
 
